@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+  index.html — ARQUIVO PRINCIPAL
+  O GitHub Pages procura exatamente por este nome. É a primeira coisa que abre.
+  Ele só monta a "casca" do jogo: cada <section class="tela"> é uma tela.
+  Só uma tela aparece por vez; quem troca de tela é o js/main.js.
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Esta linha faz o site se ajustar à largura do celular. Não apague. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patrulha Espacial</title>
+
+  <!-- Fontes do Google (se ficarem offline, o navegador usa uma fonte padrão) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS: a ORDEM importa. Primeiro as cores (tema), depois o visual (estilo). -->
+  <link rel="stylesheet" href="css/tema.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+  <!-- ========== TELA 1: MENU INICIAL ========== -->
+  <!-- id="tela-menu" é o "endereço" da tela. O main.js usa esse id. -->
+  <section id="tela-menu" class="tela ativa">
+    <h1>Patrulha Espacial</h1>
+    <p class="subtitulo">Academia de Cadetes — Galáxia de Quíron</p>
+
+    <!-- data-ir="..." diz PARA QUAL tela o botão leva (veja js/main.js) -->
+    <button class="botao" data-ir="tela-jogar">Jogar</button>
+    <button class="botao secundario" data-ir="tela-docente">Área do docente</button>
+  </section>
+
+  <!-- ========== TELA 2: ÁREA DO DOCENTE ========== -->
+  <section id="tela-docente" class="tela">
+    <h2>Área do docente</h2>
+    <p>Aqui entrará o material do professor e a parte matemática.</p>
+    <button class="botao secundario" data-ir="tela-menu">Voltar</button>
+  </section>
+
+  <!-- ========== TELA 3: ESCOLHA DO MODO DE JOGO ========== -->
+  <section id="tela-jogar" class="tela">
+    <h2>Escolha sua missão</h2>
+    <button class="botao">Jogo completo</button>
+    <!-- Os capítulos abaixo ainda não fazem nada: serão ligados nas próximas etapas.
+         Para criar um capítulo novo no futuro, basta copiar uma destas linhas. -->
+    <button class="botao secundario">Capítulo 1 — Estação Zenith</button>
+    <button class="botao secundario">Capítulo 2 — Geon</button>
+    <button class="botao secundario" data-ir="tela-menu">Voltar</button>
+  </section>
+
+  <!-- JavaScript no FINAL, para o navegador já ter lido todas as telas acima -->
+  <script src="js/main.js"></script>
+</body>
+</html>

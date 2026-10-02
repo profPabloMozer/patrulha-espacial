@@ -1,0 +1,19 @@
+/*
+  tema.css — SÓ CORES E FONTES
+  Quer mudar o visual do jogo inteiro? Altere os valores aqui.
+  O resto do CSS (estilo.css) usa estes nomes com var(--nome).
+*/
+:root {
+  /* Cores */
+  --fundo:        #0a1330;  /* azul-marinho profundo (fundo do espaço) */
+  --painel:       #121f4a;  /* azul um pouco mais claro (caixas e botões) */
+  --ciano:        #3fd8ff;  /* destaque principal: bordas e botões */
+  --ambar:        #f2b13c;  /* patentes e recompensas (dourado) */
+  --alerta:       #ff5c6c;  /* erros e perda de pontos de prestígio */
+  --texto:        #e8f0ff;  /* texto principal */
+  --texto-suave:  #9fb0d9;  /* texto secundário */
+
+  /* Fontes: a segunda opção é reserva, caso a primeira não carregue */
+  --fonte-titulo: "Orbitron", "Trebuchet MS", sans-serif;
+  --fonte-texto:  "Rajdhani", "Segoe UI", sans-serif;
+}
